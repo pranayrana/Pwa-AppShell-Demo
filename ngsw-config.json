@@ -30,7 +30,7 @@
   "dataGroups": [
     {
       "name": "photoservicecache",
-      "urls": ["**/search/photos**"],
+      "urls": ["https://api.unsplash.com/search/photos**"],
       "version": 1,
       
       "cacheConfig": {
