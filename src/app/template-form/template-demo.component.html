@@ -1,0 +1,19 @@
+<h2> Heroes</h2>
+<hr/>
+<table class="table table-striped" >
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr appHoverColor="green" *ngFor="let hero of heroes$|async">
+            <td> {{hero.id}} </td>
+            <td> {{hero.name | upperCase}} </td>
+            <td><a class="nav-link" [routerLink]="['./',hero.id]">Edit</a></td>
+        </tr> 
+    </tbody>
+</table>
+

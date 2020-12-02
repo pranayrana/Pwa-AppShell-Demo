@@ -1,0 +1,31 @@
+<div class="container p-3 my-3 border" [ngClass]="{ 'border border-danger' : heroForm.invalid}">
+  <form [formGroup]="heroForm" (ngSubmit)="save()">
+      <div class="row">
+          <div class="col-3">
+              <label for="id">Id:</label>
+          </div>
+          <div class="col-3">
+              <input  formControlName="id"  type="text"  class="form-control" />
+          </div>
+      </div> 
+      <div class="row">
+          <div class="col-3">
+              <label for="name">Name:</label>
+          </div>
+          <div class="col-3">
+              <app-input-control>
+                <input  formControlName="name" type="text"  class="form-control" />                  
+              </app-input-control>
+          </div>
+              {{nameErrors|json}}
+      </div>
+      <div class="row">
+          <div class="col-1">
+              <input type="submit" class="btn btn-primary" value="Submit">
+          </div>    
+          <div class="col-1">
+              <input type="button" class="btn btn-secondary" (click)="cancel()" value="Cancel">
+          </div>    
+      </div> 
+  </form>
+</div>

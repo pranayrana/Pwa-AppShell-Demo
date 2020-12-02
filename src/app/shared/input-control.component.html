@@ -1,0 +1,9 @@
+<div [ngClass]="{ 'border border-danger' : isValid()}">
+    <ng-content>
+    
+    </ng-content>
+</div>
+<span class="text-danger" *ngIf="isValid()"> 
+    Value is required 
+</span>
+    
